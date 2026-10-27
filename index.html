@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>La Flaca toca a tu puerta · Calaverita literaria</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<canvas id="petals" aria-hidden="true"></canvas>
+<nav aria-label="Secciones"><a href="#inicio">Inicio</a><a href="#calaverita">La calaverita</a><a href="#historia">Historia</a><a href="#sirven">Para qué sirven</a><a href="#datos">Datos curiosos</a><a href="#catrina">Habla con la Catrina</a></nav>
+<div class="flags" aria-hidden="true"></div>
+
+<section id="inicio" class="hero">
+<h1>Antes de que la Flaca llegue, ríete con ella</h1>
+<p>Una calaverita literaria para quien todavía respira: escúchala en voz baja, lee entre líneas y descubre por qué en México la muerte también sabe hacer reír.</p>
+<button class="btn" id="go">Escuchar la calaverita</button>
+</section>
+
+<section id="calaverita">
+<h2>La calaverita</h2>
+<div class="poem">
+<h3>La Flaca toca a tu puerta</h3>
+<p class="by">Calaverita literaria para quien la lee</p>
+<div id="poem"></div>
+<div class="ctrl"><button class="btn" id="play">Escuchar</button><button class="btn ghost" id="stop">Detener</button></div>
+<audio id="au" controls hidden style="width:100%;margin-top:16px" aria-label="Tu grabación"></audio>
+<div class="vpanel"><button class="btn ghost" id="vsync" hidden>Ajustar sincronía</button><button class="btn ghost" id="vreset" hidden>Restablecer sincronía</button><span id="vmsg"></span><div id="tapbox" hidden><button class="btn" id="tapbtn" style="font-size:19px;padding:14px 24px;border-radius:18px"></button></div></div>
+<p class="note" id="vnote">Narrada con una voz humana grabada.</p>
+</div>
+</section>
+
+<section id="historia">
+<h2>Cómo empezaron las calaveritas</h2>
+<p>Una calaverita es un verso que finge que la muerte ya vino por alguien que sigue vivo. Su historia es una mezcla de rituales antiguos, fiestas católicas y mucha picardía de imprenta.</p>
+<ol class="tl" style="list-style:none">
+<li><b>Antes de la Conquista</b>Los pueblos mesoamericanos veían la muerte como un tránsito, no como un final. A los difuntos se les honraba con ofrendas y rituales.</li>
+<li><b>Siglos XVI al XVIII</b>Las fiestas católicas de Todos los Santos y Fieles Difuntos se encuentran con las costumbres indígenas. Nace el Día de Muertos tal como lo conocemos.</li>
+<li><b>Siglo XIX</b>En los periódicos mexicanos aparecen las “calaveras”: versos satíricos que anunciaban la muerte de políticos y personajes vivos para criticarlos con humor.</li>
+<li><b>Principios del siglo XX</b>El grabador José Guadalupe Posada llena de calaveras las hojas populares y crea a la Calavera Garbancera, una burla elegante de la vanidad.</li>
+<li><b>1947</b>Diego Rivera la pinta en su mural <i>Sueño de una tarde dominical en la Alameda Central</i> y la bautiza como la Catrina.</li>
+<li><b>Hoy</b>Las calaveritas se escriben en escuelas, oficinas y familias. En 2008, la UNESCO inscribió el Día de Muertos como Patrimonio Cultural Inmaterial de la Humanidad.</li>
+</ol>
+</section>
+
+<section id="sirven">
+<h2>Para qué sirven</h2>
+<div class="uses">
+<div><h4>Para reírnos del miedo</h4><p>Si podemos bromear con la muerte, deja de ser una sombra y se vuelve una vecina.</p></div>
+<div><h4>Para decir verdades</h4><p>El humor dice lo que la solemnidad calla: critica, retrata y hasta perdona.</p></div>
+<div><h4>Para recordar</h4><p>Nombrar a alguien en un verso es mantenerlo presente entre quienes lo quieren.</p></div>
+<div><h4>Para reunirnos</h4><p>Se leen en voz alta, se comparten y se celebran. Son pretexto para estar juntos.</p></div>
+</div>
+</section>
+
+<section id="datos">
+<h2>Datos curiosos</h2>
+<div class="facts">
+<div class="fact">Casi siempre se escriben en cuartetas con rima, y lo normal es que la Muerte se lleve a quien protagoniza el verso.</div>
+<div class="fact">“Garbancera” era una burla para quienes renegaban de su origen para aparentar una vida europea. La Catrina nació de esa crítica.</div>
+<div class="fact">Cempasúchil viene del náhuatl y se suele traducir como “flor de veinte”. Su color y su aroma guían a las almas hasta la ofrenda.</div>
+<div class="fact">En muchos lugares se regalan calaveritas de azúcar con el nombre de la persona escrito en la frente.</div>
+<div class="fact">El pan de muerto lleva tiras en forma de “huesitos” y un círculo al centro que representa el ciclo de la vida.</div>
+<div class="fact">Una buena calaverita se burla con cariño: la risa es para acercar, no para herir.</div>
+</div>
+</section>
+
+<section id="catrina">
+<h2>Habla con la Catrina</h2>
+<p>Pregúntale lo que quieras sobre las calaveritas y el Día de Muertos. Toca su sombrero, sus ojos, su calavera o su vestido para conocer su historia.</p>
+<div class="talk">
+<div class="cat" id="cat">
+<svg viewBox="0 0 300 420" role="group" aria-label="Catrina interactiva: toca una parte para conocer su historia">
+<defs>
+<radialGradient id="bn" cx="42%" cy="35%" r="75%"><stop offset="0" stop-color="#fffaf0"/><stop offset=".5" stop-color="#eadcbc"/><stop offset="1" stop-color="#9c7d52"/></radialGradient>
+<radialGradient id="ey" cx="50%" cy="40%" r="65%"><stop offset="0" stop-color="#000"/><stop offset="1" stop-color="#2a1119"/></radialGradient>
+<linearGradient id="ht" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#55306a"/><stop offset="1" stop-color="#120918"/></linearGradient>
+<linearGradient id="dr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7a2a9c"/><stop offset="1" stop-color="#15051f"/></linearGradient>
+<linearGradient id="pl" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#d81b73"/><stop offset="1" stop-color="#ff8a4c"/></linearGradient>
+<radialGradient id="gl"><stop offset="0" stop-color="#ff9d1c" stop-opacity=".4"/><stop offset="1" stop-color="#ff9d1c" stop-opacity="0"/></radialGradient>
+<filter id="tx" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".75" numOctaves="3" result="n"/><feColorMatrix in="n" values="0 0 0 0 .4 0 0 0 0 .3 0 0 0 0 .18 0 0 0 .55 -.12" result="m"/><feComposite in="m" in2="SourceGraphic" operator="in" result="c"/><feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="c"/></feMerge></filter>
+<filter id="bl"><feGaussianBlur stdDeviation="6"/></filter><filter id="b2"><feGaussianBlur stdDeviation="2"/></filter>
+<filter id="sh" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="8" stdDeviation="7" flood-opacity=".65"/></filter>
+<g id="fl"><circle r="11" fill="none" stroke="#c94a08" stroke-width="8" stroke-dasharray="3.6 1.5"/><circle r="6.5" fill="none" stroke="#ff8a1c" stroke-width="6" stroke-dasharray="2.8 1.2"/><circle r="3.4" fill="none" stroke="#ffc23a" stroke-width="4" stroke-dasharray="2 1"/><circle r="1.6" fill="#8a3004"/></g>
+</defs>
+<circle cx="150" cy="200" r="200" fill="url(#gl)"/>
+<g class="part" data-k="vestido" tabindex="0" role="button" aria-label="Vestido">
+<path d="M6 420C16 345 70 306 118 294h64c48 12 102 51 112 126z" fill="url(#dr)" filter="url(#sh)"/>
+<path d="M60 420c10-50 30-80 60-100M240 420c-10-50-30-80-60-100M150 330v90" stroke="#fff" stroke-opacity=".08" stroke-width="6" fill="none" filter="url(#b2)"/>
+<use href="#fl" transform="translate(150 338) scale(1.6)"/></g>
+<g class="part" data-k="encaje" tabindex="0" role="button" aria-label="Encaje del cuello">
+<path d="M92 292Q150 332 208 292L222 312Q150 372 78 312z" fill="#f2e7d0"/>
+<path d="M88 304Q150 350 212 304" fill="none" stroke="#7a2a9c" stroke-width="4" stroke-dasharray="1 7" stroke-linecap="round"/>
+<path d="M76 314Q150 376 224 314" fill="none" stroke="#f2e7d0" stroke-width="7" stroke-dasharray="0 9" stroke-linecap="round"/></g>
+<g class="part" data-k="craneo" tabindex="0" role="button" aria-label="Calavera">
+<g fill="url(#bn)" filter="url(#tx)"><ellipse cx="150" cy="278" rx="12" ry="7"/><ellipse cx="150" cy="288" rx="14" ry="7"/>
+<path d="M150 104C96 104 86 164 98 202c5 14 14 22 20 36 4 17 14 27 32 27s28-10 32-27c6-14 15-22 20-36 12-38 2-98-52-98z"/></g>
+<ellipse cx="102" cy="208" rx="10" ry="26" fill="#6b4b25" opacity=".3" filter="url(#bl)"/><ellipse cx="198" cy="208" rx="10" ry="26" fill="#6b4b25" opacity=".3" filter="url(#bl)"/>
+<ellipse cx="136" cy="134" rx="22" ry="12" fill="#fff" opacity=".35" filter="url(#bl)"/>
+<path d="M150 110v18M138 114l4 12M162 114l-4 12" stroke="#8a6a40" stroke-opacity=".5" fill="none"/></g>
+<g class="part" data-k="ojos" tabindex="0" role="button" aria-label="Ojos">
+<g id="oj"><ellipse cx="122" cy="174" rx="18" ry="22" fill="url(#ey)"/><ellipse cx="122" cy="174" rx="22" ry="26" fill="none" stroke="#d81b73" stroke-width="4" stroke-dasharray="3 2.4"/><ellipse cx="122" cy="174" rx="26" ry="30" fill="none" stroke="#ff9d1c" stroke-width="1.5" stroke-dasharray="1 5" stroke-linecap="round"/><circle cx="122" cy="178" r="3.5" fill="#ff7a1c" filter="url(#b2)"/></g>
+<use href="#oj" transform="translate(300 0) scale(-1 1)"/></g>
+<g class="part" data-k="nariz" tabindex="0" role="button" aria-label="Nariz"><path d="M150 202c-9 10-11 24 0 28 11-4 9-18 0-28z" fill="#190a11"/></g>
+<g class="part" data-k="dientes" tabindex="0" role="button" aria-label="Dientes y sonrisa">
+<path d="M116 240Q150 256 184 240v18q-34 14-68 0z" fill="#1a0b12"/>
+<g fill="url(#bn)" stroke="#8a6a40" stroke-width=".8"><rect x="121" y="243" width="8" height="15" rx="2"/><rect x="130" y="246" width="8" height="15" rx="2"/><rect x="139" y="248" width="8" height="15" rx="2"/><rect x="148" y="248" width="8" height="15" rx="2"/><rect x="157" y="246" width="8" height="15" rx="2"/><rect x="166" y="243" width="8" height="15" rx="2"/></g>
+<path d="M112 238Q150 258 188 238" fill="none" stroke="#2a140f" stroke-width="2.4"/><path d="M112 238l-4-6M188 238l4-6" stroke="#2a140f" stroke-width="2"/></g>
+<g class="part" data-k="sombrero" tabindex="0" role="button" aria-label="Sombrero">
+<path d="M90 112C88 58 106 26 150 26s62 32 60 86z" fill="url(#ht)" filter="url(#sh)"/>
+<path d="M90 98h120l1 14H89z" fill="#d81b73"/>
+<ellipse cx="150" cy="114" rx="142" ry="22" fill="url(#ht)" filter="url(#sh)"/>
+<path d="M30 112Q150 160 270 112Q150 138 30 112z" fill="#000" opacity=".35"/></g>
+<g class="part" data-k="plumas" tabindex="0" role="button" aria-label="Plumas">
+<path d="M190 70C226 6 282 8 292 46 268 30 238 46 208 86z" fill="url(#pl)"/><path d="M196 74C222 34 262 22 284 40" stroke="#fff" stroke-opacity=".5" fill="none"/>
+<path d="M176 60C196 -4 250 -6 262 22 240 14 214 30 194 70z" fill="#7a2a9c"/></g>
+<g class="part" data-k="flores" tabindex="0" role="button" aria-label="Flores del sombrero">
+<use href="#fl" transform="translate(112 90) scale(1.5)"/><use href="#fl" transform="translate(138 76) scale(1.25)"/><use href="#fl" transform="translate(98 106) scale(1.1)"/><use href="#fl" transform="translate(172 92) scale(1.2)"/><use href="#fl" transform="translate(66 118) scale(.9)"/><use href="#fl" transform="translate(230 112) scale(.9)"/></g>
+</svg>
+<p class="hint">Toca una parte de la Catrina</p></div>
+<div>
+<div class="story" id="story" aria-live="polite"><h4>Su cuerpo cuenta una historia</h4><p>Toca el sombrero, los ojos o el vestido de la Catrina, o elige una parte aquí abajo.</p></div><div class="parts" id="parts"></div><div class="log" id="log" aria-live="polite"></div>
+<div class="chips" id="chips"></div>
+<form class="ask" id="ask"><input id="q" type="text" placeholder="Escribe tu pregunta…" aria-label="Tu pregunta"><button class="btn" type="submit">Preguntar</button></form>
+
+</div>
+</div>
+</section>
+
+<footer>Hecho para recordar con una sonrisa.<br>Que nunca falte una flor, una vela ni un verso.</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
